@@ -76,7 +76,7 @@ while cap.isOpened():
             # Regla: Dibujar rectángulo, ID y confianza
             texto_label = f"ID: {track_id} | Conf: {conf:.2f}"
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            cv2.putText(frame, texto_label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            cv2.putText(frame, texto_label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 255, 0), 2)
             
             # Dibujar un punto en el centro de la persona para visualizar mejor el track
             cv2.circle(frame, (centro_x, centro_y), 4, (255, 0, 0), -1)
