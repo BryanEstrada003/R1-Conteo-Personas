@@ -1,2 +1,19 @@
 # R1-Conteo-Personas
 En un parque se desea detectar y contar la cantidad de personas que cruzan cierta parte del parque. Durante el dia se graba un video para luego procesarlo y obtener la cantidad de personas que cruzaron una linea virtual (horizontal) en el video. Se desea que cada persona se cuente una sola vez, aunque cruce la línea varias veces.
+
+
+### ¿Cómo correrlo ahora?
+
+Si tu video está en la misma carpeta:
+
+```bash
+python3 conteo.py video_parque.mp4
+
+```
+
+Si el video está en otra carpeta, le pasas la ruta completa o relativa:
+
+```bash
+python3 conteo.py /ruta/a/tu/carpeta/video_parque.mp4
+
+```
