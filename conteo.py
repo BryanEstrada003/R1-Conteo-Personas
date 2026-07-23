@@ -16,7 +16,7 @@ args = parser.parse_args()
 model = YOLO('yolov8n.pt') 
 
 # 2. CONFIGURAR LECTURA DE VIDEO
-video_path = args.video_path # Toma la ruta pasada como argumento al ejecutar
+video_path = args.video_path
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():
@@ -78,7 +78,7 @@ while cap.isOpened():
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
             cv2.putText(frame, texto_label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
             
-            # (Opcional) Dibujar un punto en el centro de la persona para visualizar mejor el track
+            # Dibujar un punto en el centro de la persona para visualizar mejor el track
             cv2.circle(frame, (centro_x, centro_y), 4, (255, 0, 0), -1)
 
             # 6. LÓGICA DE CRUCE Y CONTEO
@@ -103,7 +103,7 @@ while cap.isOpened():
     # Guardar el frame en el video de salida
     out.write(frame)
     
-    # Mostrar el proceso en pantalla (puedes comentar estas 3 líneas si solo quieres procesar en segundo plano)
+    # Mostrar el proceso en pantalla
     cv2.imshow("Conteo de Personas - YOLOv8", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
